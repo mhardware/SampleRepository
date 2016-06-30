@@ -26,6 +26,10 @@ public class ConverterActivity extends AppCompatActivity {
                 dblConvertedValue = dblInputValue * 1.60934;
                 tvConvertedValue.setText(String.valueOf(dblConvertedValue));
                 break;
+            case "KmToMiles" :
+                dblConvertedValue = dblInputValue / 1.60934;
+                tvConvertedValue.setText(String.valueOf(dblConvertedValue));
+                break;
             default :
                 tvConvertedValue.setText("Not implemented");
         }
