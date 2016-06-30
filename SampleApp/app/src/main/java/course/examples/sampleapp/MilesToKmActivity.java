@@ -10,5 +10,6 @@ public class MilesToKmActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_miles_to_km);
         // testing GitHub
+        // testing GitHub 2
     }
 }
