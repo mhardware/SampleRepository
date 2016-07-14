@@ -1,9 +1,12 @@
 <resources>
     <string name="app_name">SampleApp2</string>
+    
+    <!-- Converter -->
     <string name="display_converter_label">Display Converter</string>
-    <string name="display_weather_label">Display Weather</string>
     <string name="converter_act_label">Converter</string>
     <string name="convert_to_prompt">Convert To</string>
+    <string name="input_value_hint">input a decimal number</string>
+    <string name="convert_btn_label">Convert</string>
     <string-array name="converter_array">
         <item>MilesToKm</item>
         <item>KmToMiles</item>
@@ -11,6 +14,13 @@
         <item>FahrenheitToCentigrate</item>
         <item>InchesToCm</item>
         <item>CmToInches</item>
+        <item>PintToLitre</item>
+        <item>LitreToPint</item>
     </string-array>
-    <string name="convert_btn_label">Convert</string>
+    <string name="error_input_value_invalid">ERROR! - INPUT VALUE IS INVALID</string>
+    
+    <!-- Date and Time -->
+    <string name="display_date_time_label">Display Date and Time</string>
+    <string name="date_time_act_label">Date and Time</string>
+    <string name="uk_date_time_text">Current date and time in UK : </string>
 </resources>

@@ -23,10 +23,11 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/display_weather_label"
-        android:id="@+id/btnDisplayWeather"
+        android:text="@string/display_date_time_label"
+        android:id="@+id/btnDisplayDateTime"
         android:layout_below="@+id/btnDisplayConverter"
         android:layout_alignParentStart="true"
-        android:background="#FD9BF3"/>
+        android:background="#FD9BF3"
+        android:onClick="displayDateTime"/>
 
 </RelativeLayout>

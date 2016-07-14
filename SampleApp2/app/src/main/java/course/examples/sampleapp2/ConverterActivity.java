@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+
 public class ConverterActivity extends AppCompatActivity {
 
     @Override
@@ -15,24 +16,51 @@ public class ConverterActivity extends AppCompatActivity {
     }
 
     public void convertValue(View v) {
-        
+
+        double dblInputValue = 0;
+        double dblConvertedValue = 0;
+
         TextView tvInputValue = (TextView) findViewById(R.id.tbxInputValue);
-        double dblInputValue = Double.parseDouble(tvInputValue.getText().toString());
-        double dblConvertedValue;
-        Spinner spnConvert = (Spinner) findViewById(R.id.spnConvertTo);
         TextView tvConvertedValue = (TextView) findViewById(R.id.txtConvertedValue);
-        switch (String.valueOf(spnConvert.getSelectedItem())) {
-            case "MilesToKm" :
-                dblConvertedValue = dblInputValue * 1.60934;
-                tvConvertedValue.setText(String.valueOf(dblConvertedValue));
+        Spinner spnConvert = (Spinner) findViewById(R.id.spnConvertTo);
+        
+        try {
+            dblInputValue = Double.parseDouble(tvInputValue.getText().toString());
+        } catch (Exception e) {
+            tvConvertedValue.setText(R.string.error_input_value_invalid);
+            return ;
+        }
+        
+        switch (spnConvert.getSelectedItemPosition()) {
+            case  ConversionUtility.MILES_TO_KM_POSITION :
+                dblConvertedValue = ConversionUtility.convertMilesToKm(dblInputValue);
                 break;
-            case "KmToMiles" :
-                dblConvertedValue = dblInputValue / 1.60934;
-                tvConvertedValue.setText(String.valueOf(dblConvertedValue));
+            case ConversionUtility.KM_TO_MILES_POSITION :
+                dblConvertedValue = ConversionUtility.convertKmToMiles(dblInputValue);
+                break;
+            case ConversionUtility.CENTIGRATE_TO_FAHRENHEIT_POSITION :
+                dblConvertedValue = ConversionUtility.convertCentigradeToFahrenheit(dblInputValue);
+                break;
+            case ConversionUtility.FAHRENHEIT_TO_CENTRIGRATE_POSITION :
+                dblConvertedValue = ConversionUtility.convertFahrenheitToCentigrade(dblInputValue);
+                break;
+            case ConversionUtility.INCHES_TO_CM_POSITION :
+                dblConvertedValue = ConversionUtility.convertInchesToCm(dblInputValue);
+                break;
+            case ConversionUtility.CM_TO_INCHES_POSITION :
+                dblConvertedValue = ConversionUtility.convertCmToInches(dblInputValue);
+                break;
+            case ConversionUtility.PINT_TO_LITRE_POSITION :
+                dblConvertedValue = ConversionUtility.convertPintToLitre(dblInputValue);
+                break;
+            case ConversionUtility.LITRE_TO_PINT_POSITION :
+                dblConvertedValue = ConversionUtility.convertLitreToPint(dblInputValue);
                 break;
             default :
-                tvConvertedValue.setText("Not implemented");
+                // throw error
         }
+        
+        tvConvertedValue.setText(String.valueOf(dblConvertedValue));
     }
 
 }

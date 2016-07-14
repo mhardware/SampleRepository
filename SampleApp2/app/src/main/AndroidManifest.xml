@@ -15,8 +15,14 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ConverterActivity"
-            android:label="@string/converter_act_label">
+        <activity
+            android:name=".ConverterActivity"
+            android:label="@string/converter_act_label"
+            android:windowSoftInputMode="stateVisible|adjustResize">
+        </activity>
+        <activity 
+            android:name=".DateTimeActivity"
+            android:label="@string/date_time_act_label">
         </activity>
     </application>
 
