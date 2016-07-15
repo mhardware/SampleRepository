@@ -9,6 +9,25 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="course.examples.sampleapp2.ConverterActivity">
+    
+    <EditText
+        android:id="@+id/tbxInputValue"
+        android:hint="@string/input_value_hint"
+        android:inputType="numberSigned|numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/element_top_margin"/>
+
+    <TextView
+        android:id="@+id/txtConvertedValue"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tbxInputValue"
+        android:layout_marginTop="@dimen/element_top_margin"
+        android:layout_alignParentStart="true"/>
 
     <Spinner
         android:id="@+id/spnConvertTo"
@@ -16,33 +35,19 @@
         android:prompt="@string/convert_to_prompt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"/>
-
-    <EditText
-        android:id="@+id/tbxInputValue"
-        android:hint="@string/input_value_hint"
-        android:inputType="numberSigned|numberDecimal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/spnConvertTo"
+        android:layout_below="@+id/txtConvertedValue"
+        android:layout_marginTop="@dimen/element_top_margin"
         android:layout_alignParentStart="true"/>
 
     <Button
         android:id="@+id/btnConvert"
         android:text="@string/convert_btn_label"
         android:onClick="convertValue"
+        android:background="#AED2FF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tbxInputValue"
-        android:layout_alignParentStart="true"
-        android:background="#AED2FF"/>
-
-    <TextView
-        android:id="@+id/txtConvertedValue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnConvert"
+        android:layout_below="@+id/spnConvertTo"
+        android:layout_marginTop="@dimen/element_top_margin"
         android:layout_alignParentStart="true"/>
 
 

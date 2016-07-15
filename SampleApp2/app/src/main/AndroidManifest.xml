@@ -18,7 +18,7 @@
         <activity
             android:name=".ConverterActivity"
             android:label="@string/converter_act_label"
-            android:windowSoftInputMode="stateVisible|adjustResize">
+            android:windowSoftInputMode="stateVisible">
         </activity>
         <activity 
             android:name=".DateTimeActivity"
