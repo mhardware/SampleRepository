@@ -11,7 +11,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
@@ -20,7 +19,11 @@
             android:label="@string/converter_act_label"
             android:windowSoftInputMode="stateVisible">
         </activity>
-        <activity 
+        <activity
+            android:name=".ContactInfoActivity"
+            android:label="@string/contact_info_act_label">
+        </activity>
+        <activity
             android:name=".DateTimeActivity"
             android:label="@string/date_time_act_label">
         </activity>

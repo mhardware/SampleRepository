@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">SampleApp2</string>
-    
+
     <!-- Converter -->
     <string name="display_converter_label">Display Converter</string>
     <string name="converter_act_label">Converter</string>
@@ -18,6 +18,10 @@
         <item>LitreToPint</item>
     </string-array>
     <string name="error_input_value_invalid">ERROR! - INPUT VALUE IS INVALID</string>
+
+    <!-- Contact Info -->
+    <string name="contact_info_act_label">Contact Info</string>
+    <string name="display_contact_info_label">Display Contact Info</string>
     
     <!-- Date and Time -->
     <string name="display_date_time_label">Display Date and Time</string>

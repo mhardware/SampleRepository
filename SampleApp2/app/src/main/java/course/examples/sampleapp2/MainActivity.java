@@ -17,7 +17,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, ConverterActivity.class);
         startActivity(intent);
     }
-    
+
+    public void displayContactInfo(View v) {
+        Intent intent = new Intent(MainActivity.this, ContactInfoActivity.class);
+        startActivity(intent);
+    }
+
     public void displayDateTime(View v) {
         Intent intent = new Intent(MainActivity.this, DateTimeActivity.class);
         startActivity(intent);

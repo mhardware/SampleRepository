@@ -22,13 +22,24 @@
         android:layout_marginTop="@dimen/element_top_margin"/>
 
     <Button
+        android:text="@string/display_contact_info_label"
+        android:id="@+id/btnDisplayContactInfo"
+        android:background="#FD9BF3"
+        android:onClick="displayContactInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDisplayConverter"
+        android:layout_marginTop="@dimen/element_top_margin"
+        android:layout_alignParentStart="true"/>
+
+    <Button
         android:text="@string/display_date_time_label"
         android:id="@+id/btnDisplayDateTime"
         android:background="#FD9BF3"
         android:onClick="displayDateTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnDisplayConverter"
+        android:layout_below="@+id/btnDisplayContactInfo"
         android:layout_marginTop="@dimen/element_top_margin"
         android:layout_alignParentStart="true"/>
 
