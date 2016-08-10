@@ -9,5 +9,50 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="course.examples.sampleapp2.ContactInfoActivity">
+    
+    <EditText
+        android:id="@+id/tbxEmailAddress"
+        android:hint="@string/enter_email_address_hint"
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/element_top_margin"/>
+    
+    <Button
+        android:id="@+id/btnGetContactInfo"
+        android:text="@string/contact_info_btn_label"
+        android:onClick="getContactInfo"
+        android:background="#AED2FF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tbxEmailAddress"
+        android:layout_marginTop="@dimen/element_top_margin"
+        android:layout_alignParentStart="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_below="@+id/btnGetContactInfo"
+        android:layout_marginTop="@dimen/element_top_margin">
+        <ProgressBar
+            android:id="@+id/pbContactInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:indeterminate="true"
+            android:visibility="gone"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/txtContactInfo"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </ScrollView>
+    </RelativeLayout>
 
 </RelativeLayout>

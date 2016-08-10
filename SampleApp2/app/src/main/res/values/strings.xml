@@ -22,6 +22,8 @@
     <!-- Contact Info -->
     <string name="contact_info_act_label">Contact Info</string>
     <string name="display_contact_info_label">Display Contact Info</string>
+    <string name="enter_email_address_hint">input email address</string>
+    <string name="contact_info_btn_label">Get Contact Info</string>
     
     <!-- Date and Time -->
     <string name="display_date_time_label">Display Date and Time</string>
